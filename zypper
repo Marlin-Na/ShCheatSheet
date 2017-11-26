@@ -1,0 +1,5 @@
+zypper se pkgname    # Search package
+zypper info pkgname  # Information of a package
+zypper in pkgname    # Install package
+zypper up pkgname    # Update a package
+
