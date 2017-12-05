@@ -1,0 +1,2 @@
+# Show shared object dependencies of a program
+ldd /usr/bin/ls
