@@ -1,0 +1,2 @@
+# Show the MIME type of a file
+file -mime-type 'filename'
