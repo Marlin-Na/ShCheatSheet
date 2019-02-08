@@ -1,0 +1,33 @@
+# List keys
+
+    gpg2 -k some@email.org # list public keys
+    gpg2 -K                # list secret keys
+
+# User id and key id
+
+    The user id (UID) is just the name of the user. When editing key or encrypting files,
+    the name can be partically matched (i.e. type "Ma" to match "Marlin").
+    And email can also be used to identify the uid.
+    See: https://www.gnupg.org/documentation/manuals/gnupg/Specify-a-User-ID.html
+
+    The key id (KID) can be acquired from `gpg2 --list-keys`,
+
+
+# Edit the key, e.g. add an uid
+
+    gpg2 --edit-key
+
+# Sign(-s), Encrypt(-e), Symmetric(-c), Clearsign, Detach-sign and Decrypt(-d), Verify
+
+  --sign, --encrypt and --symmetric can be combined with each one.
+    o sign + encrypt:      for a signed and encrypted message
+    o sign + symmetric:    for a signed and symmetrically encrypted message
+    o encrypt + symmetric: for a message that may be decrypted via a secret key *or* a passphrase
+    o three together:      for a signed message that may be decrypted via a secret key *or* a passphrase
+
+  Use --throw-keyids to hide receivers
+
+# Export public key
+
+    gpg2 --export --armor
+
